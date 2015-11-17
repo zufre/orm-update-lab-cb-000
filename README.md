@@ -2,7 +2,7 @@
 
 ## Objectives
 
-1. Build an `#update` method that udpates an existing record. 
+1. Build an `#update` method that updates an existing record. 
 
 ## Instructions
 
