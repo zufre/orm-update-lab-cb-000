@@ -47,9 +47,10 @@ describe "Student" do
 
   describe "#save" do 
     it 'saves an instance of the Student class to the database and then sets the given students `id` attribute' do 
-      josh.save
-      expect(DB[:conn].execute("SELECT * FROM students")).to eq([[1, "Josh", "9th"]])
-      expect(josh.id).to eq(1)
+      sarah = Student.new("Sarah", "9th")
+      sarah.save
+      expect(DB[:conn].execute("SELECT * FROM students")).to eq([[1, "Sarah", "9th"]])
+      expect(sarah.id).to eq(1)
     end
   end
 
