@@ -36,7 +36,7 @@ This instance method inserts a new row into the database using the attributes of
 
 ### The `.create` Method
 
-This is a class method that uses keyword arguments. The keyword arguments are `name:` and `grade:`. Use the values of these keyword arguments to: 1) instantiate a new `Student` object with `Student.new(name, grade)` and 2) save that new student object via `student.save`. 
+This method creates a student with two attributes, `name` and `grade`. 
 
 ### The `.new_from_db` Method
 
@@ -53,31 +53,4 @@ This class method takes in an argument of a name. It queries the database table 
 This method updates the database row mapped to the given `Student` instance. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/orm-update-lab' title='ORM Update Lab'>ORM Update Lab</a> on Learn.co and start learning to code for free.</p>
+<a href='https://learn.co/lessons/orm-update-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
