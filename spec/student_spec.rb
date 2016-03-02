@@ -64,8 +64,8 @@ describe "Student" do
   end
 
   describe "#create" do 
-    it 'takes in a hash of attributes and uses metaprogramming to create a new student object. Then it uses the #save method to save that student to the database' do 
-      Student.create(name: "Sally", grade: "10th")
+    it 'creates a student object with name and grade attributes' do 
+      Student.create("Sally", "10th")
       expect(DB[:conn].execute("SELECT * FROM students")).to eq([[1, "Sally", "10th"]])
     end
   end
