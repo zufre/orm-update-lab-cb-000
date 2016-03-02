@@ -52,11 +52,20 @@ describe "Student" do
       expect(DB[:conn].execute("SELECT * FROM students")).to eq([[1, "Sarah", "9th"]])
       expect(sarah.id).to eq(1)
     end
+
+    it 'updates a record if called on an object that is already persisted' do 
+      jane = Student.new("Jane", "11th")
+      jane.save
+      jane.name = "Jane Smith"
+      jane.save
+      jane_from_db = DB[:conn].execute("SELECT * FROM students WHERE id = ?", jane.id)
+      expect(jane_from_db[0][1]).to eq("Jane Smith")
+    end
   end
 
   describe "#create" do 
-    it 'takes in a hash of attributes and uses metaprogramming to create a new student object. Then it uses the #save method to save that student to the database' do 
-      Student.create(name: "Sally", grade: "10th")
+    it 'creates a student object with name and grade attributes' do 
+      Student.create("Sally", "10th")
       expect(DB[:conn].execute("SELECT * FROM students")).to eq([[1, "Sally", "10th"]])
     end
   end
