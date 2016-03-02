@@ -53,31 +53,4 @@ This class method takes in an argument of a name. It queries the database table 
 This method updates the database row mapped to the given `Student` instance. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <a href='https://learn.co/lessons/orm-update-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
